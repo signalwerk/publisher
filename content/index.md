@@ -20,4 +20,4 @@ description: Publisher
 	* Baustein Like
 	* Baustein Hamburger-Menu
 	* Bausteine · Button & Link
-	* [Bausteine - Input-Fields](https://signalwerk.github.io/IAD2019/exercise-input/)
+	* [Bausteine - Input-Fields](https://signalwerk.github.io/IAD2019/exercise-input/) + [Example](https://codepen.io/team/css-tricks/pen/XVBLRM)
