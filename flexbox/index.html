@@ -49,13 +49,13 @@
 <h1 id="flexbox--ausrichten-von-elementen-im-web">Flexbox – ausrichten von Elementen im Web</h1>
 <lead>
 
-<p>Das sehr flexible CSS-Grid ist der richtige Kandidat, wenn es darum geht zweidimensionale Layouts möglichs lebendig zu erstellen. Doch wenn man einzelne Elemente verteilen möchte, dann ist Flexbox genau das richtige.</p>
+<p>Das sehr flexible CSS-Grid ist der Kandidat der Wahl, wenn es darum geht, zweidimensionale Layouts möglichst lebendig zu erstellen. Doch um einzelne Elemente zu verteilen, ist Flexbox genau das Richtige.</p>
 </lead>
 
 <h2 id="rückschau">Rückschau</h2>
-<p>Die erste Veröffentlichung von <a href="https://www.w3.org/TR/REC-CSS1-961217">Cascading Style Sheets (CSS)</a> im Jahr 1996 hatte bereits eine sehr gute Grundlage geschaffen um Texte zu formatieren und die Struktur vom Inhalt auch visuell zu unterscheiden. Wenn man ein reiches Layout mit komplexen Strukturen erreichen wollte, so war dies jedoch meist schwieriger zu erzielen. Insbesondere die seit 2007 (iPhone Einführung) stetig wachsende Bedeutung von Mobilgeräten weckte das Bedürfnis auch flexible Layouts für verschiedene Screengrössen adaptieren zu können. Erst seit dem Herbst 2018 gibt es nun eine Spezifikation über das so genannte <a href="https://www.w3.org/TR/css-flexbox/">Flexible Box Layout Module</a> (kurz Flexbox). Obwohl dieser Standard streng gesehen noch nicht abgeschlossen ist, haben alle modernen Browser schon länger die Unterstützung dafür integriert und im Gegensatz zum bereits früher (2017) eingeführten <a href="https://www.w3.org/TR/css-grid-1/">Grid Layout Module</a> (kurz CSS-Grids) haben die Browser Flexbox schneller integriert. Es steht also nichts im Weg flexbox zu verwenden.</p>
+<p>Die erste Veröffentlichung von <a href="https://www.w3.org/TR/REC-CSS1-961217">Cascading Style Sheets (CSS)</a> im Jahr 1996 hatte bereits eine sehr gute Grundlage geschaffen, um Texte zu formatieren und die Struktur vom Inhalt auch visuell zu unterscheiden. Wollte man jedoch ein reiches Layout mit komplexen Strukturen erstellen, war dies meist schwieriger zu erreichen. Insbesondere weckte die seit der iPhone-Einführung 2007 stetig wachsende Bedeutung von Mobilgeräten das Bedürfnis, auch flexible Layouts für verschiedene Screengrössen adaptieren zu können. Erst seit Herbst 2018 gibt es nun eine Spezifikation über das so genannte <a href="https://www.w3.org/TR/css-flexbox/">Flexible Box Layout Module</a> (kurz Flexbox). Obwohl dieser Standard streng gesehen noch nicht abgeschlossen ist, wird er schon von allen modernen Browsern unterstützt. Das bereits 2017 eingeführten <a href="https://www.w3.org/TR/css-grid-1/">Grid Layout Module</a> (kurz CSS-Grids) wurde wesentlich zögerlicher implementiert. Es steht also nichts im Weg, Flexbox zu verwenden.</p>
 <h2 id="anwendungsbereich">Anwendungsbereich</h2>
-<p>Auch wenn Flexbox den Anschein macht, dass man zweidimensionale Layouts machen kann, so muss man streng genommen eher von einer Methode zur Positionierung von Elementen in horizontalen oder vertikalen Schichtungen sprechen. Also man kann zwar horizontal oder vertikal gewisse Ausrichtungen steuern, aber für wirklich freie zweidimensionale Aufteilungen muss CSS-Grids verwendet werden. Dennoch bietet Flexbox viele mächtige Funktionen zur Positionierung von Elementen.</p>
+<p>Auch wenn Flexbox den Anschein erweckt, dass man damit zweidimensionale Layouts erstellen kann, handelt es sich streng genommen doch eher um eine Methode zur Positionierung von Elementen in horizontalen oder vertikalen Schichtungen. Man kann zwar horizontal oder vertikal gewisse Ausrichtungen steuern, für wirklich freie zweidimensionale Aufteilungen muss man aber CSS-Grids verwenden. Dennoch bietet Flexbox viele mächtige Funktionen zur Positionierung von Elementen.</p>
 <br />
 
 
@@ -91,7 +91,7 @@
 </div>
 </div>
 
-<p><em>Eine typische Anwendung von Flexbox ist die Aufteilung eines Layouts in Spalten</em></p>
+<p><em>Eine typische Anwendung von Flexbox ist die Aufteilung eines Layouts in Spalten.</em></p>
 <br />
 <br />
 
@@ -125,9 +125,9 @@
 </div>
 </div>
 
-<p><em>Möchte man aber anstatt Spalten einen Gestaltungsraster, der auch über mehrere «Zeilen» hinweg funktioniert, so arbeitet man besser gleich mit CSS-Grids.</em></p>
+<p><em>Möchte man aber statt Spalten einen Gestaltungsraster, der auch über mehrere  «Zeilen» hinweg funktioniert, so arbeitet man besser gleich mit CSS-Grids.</em></p>
 <h2 id="hauptachse--kreuzachse">Hauptachse &amp; Kreuzachse</h2>
-<p>Grundsätzlich benötigt man im HTML ein Container-Element, welches den Display-Mode <code>flex</code> erhält. Die zu verteilenden Elemente sind dann in diesem Container-Element. Innerhalb dieses Elements kann mann dann die Hauptachse und die Kreuzachse beeinflussen. Die Hauptachse ordnet standardmässig von links nach rechts, die Kreuzachse von oben nach unten.</p>
+<p>Grundsätzlich benötigt man in HTML einen durch den Display-Modus <code>flex</code> definierten Container, in dem die zu verteilenden Elemente enthalten sind. Innerhalb dieses Containers können Haupt- und die Kreuzachse anschliessend beeinflusst werden. Die Hauptachse ordnet standardmässig von links nach rechts, die Kreuzachse von oben nach unten.</p>
 <h3 id="html">HTML</h3>
 <div class="svg-export">
 
@@ -148,7 +148,7 @@
 </div>
 
 
-<p>Die Elemente die dann im Container eingefügt werden orientieren sich nun an der Hauptachse.</p>
+<p>Die Elemente, die dann im Container eingefügt werden, orientieren sich nun an der Hauptachse.</p>
 <br />
 
 <style>
@@ -215,8 +215,7 @@
 
 
 <h2 id="container--flex-direction">Container – flex-direction</h2>
-<p>Über die <code>flex-direction</code> können wir die Hauptachse in horizontalen Zeilen oder vertikalen Spalten orientieren.
-Neben <code>row</code> und <code>column</code> gibt es jeweils noch <code>row-reverse</code> und <code>column-reverse</code>, bei denen die Reihenfolge umgekehrt wird.</p>
+<p>Über das Attribut <code>flex-direction</code> können wir die Hauptachse in horizontalen Zeilen oder vertikalen Spalten orientieren. Neben <code>row</code> und <code>column</code> gibt es jeweils noch <code>row-reverse</code> und <code>column-reverse</code>, bei denen die Reihenfolge umgekehrt wird.</p>
 <h3 id="row-standard">Row (Standard)</h3>
  <div class="svg-export">
 
@@ -275,7 +274,7 @@ Neben <code>row</code> und <code>column</code> gibt es jeweils noch <code>row-re
 <br />
 
 <h2 id="container--flex-wrap">Container – flex-wrap</h2>
-<p>Standardmässig werden alle Elemente versuchen, auf eine Linie zu passen. Mit <code>flex-wrap</code> kann gesteuert werden, wie dieser «Fluss» der Elemente innerhalb des Containers sich nun verhalten soll.</p>
+<p>Standardmässig werden alle Elemente auf einer Zeile angepasst. Mit <code>flex-wrap</code> kann gesteuert werden, wie sich die Elemente innerhalb des Containers anordnen sollen.</p>
 <h3 id="nowrap-standard">nowrap (Standard)</h3>
 <div class="svg-export">
 
@@ -533,7 +532,7 @@ Neben <code>row</code> und <code>column</code> gibt es jeweils noch <code>row-re
 
 
 <h2 id="container--align-items">Container – align-items</h2>
-<p>Mit dem Attribut <code>align-items</code> wird gesteuert, wie die Elemente innerhalb des Containers auf der Kreuzachse ausgerichtet werden. Neben den abgebildeten Werten gibt es noch weitere. Insbesondere die Möglchkeit die Elementen auch an der Schriftlinie (<code>baseline</code>) auszurichten wird ab und an verwendet.</p>
+<p>Das Attribut <code>align-items</code> steuert, wie die Elemente innerhalb des Containers auf der Kreuzachse ausgerichtet werden. Neben den abgebildeten Werten gibt es noch weitere. Insbesondere wird mit <code>baseline</code> auch die Möglichkeit, die Elemente an der Schriftlinie auszurichten, ab und an verwendet.</p>
 <h3 id="stretch-standard">stretch (Standard)</h3>
 <div class="svg-export">
 
@@ -640,7 +639,7 @@ Neben <code>row</code> und <code>column</code> gibt es jeweils noch <code>row-re
 
 
 <h2 id="container--align-content">Container – align-content</h2>
-<p>Genau wie bei <code>justify-content</code> wird mit <code>align-content</code> die Verteilung der Elemente eingerichtet. <code>justify-content</code> kontrolliert die Hauptachse und <code>align-content</code> die Kreuzachse. Es wurden nur exemplarisch einige Werte abgebildet.</p>
+<p>Entsprechend zu <code>justify-content</code>, das die Verteilung der Elemente auf der Hauptachse steuert, wird <code>align-content</code> genutzt, um die Elemente auf der Kreuzachse einzurichten.<br>Hier exemplarisch einige Werte:</p>
 <h3 id="stretch-standard-1">stretch (Standard)</h3>
 <div class="svg-export">
 
@@ -776,7 +775,7 @@ Neben <code>row</code> und <code>column</code> gibt es jeweils noch <code>row-re
 
 
 <h2 id="elemente--flex-basis-flex-grow--flex-shrink">Elemente – flex-basis, flex-grow &amp; flex-shrink</h2>
-<p>Wenn kein <code>flex-basis</code> angegeben wird, so orientiert sich die Breite der Elemente auf der Hauptachse an dem <code>width</code>-Wert des Elements. Wenn ein <code>flex-basis</code>-Wert für die Elemente angegeben wird, so wird der <code>width</code>-Wert nicht berücksichtigt und stattdessen kann man mit <code>flex-basis</code> ein Verhältnis zwischen den einzelnen Elementen angeben. Somit ist der Container flexibel und der Inhalt passt sich an. <code>flex-grow</code> und <code>flex-shrink</code> geben an, wie unbenutzter Raum verwendet werden soll.</p>
+<p>Wenn kein <code>flex-basis</code> angegeben wird, orientiert sich die Breite der Elemente auf der Hauptachse an dem <code>width</code>-Wert des Elements. Wird jedoch ein <code>flex-basis</code>-Wert für die Elemente angegeben, bleibt der <code>width</code>-Wert unberücksichtigt und man kann stattdessen mit <code>flex-basis</code> ein Verhältnis zwischen den einzelnen Elementen angeben. Somit ist der Container flexibel und der Inhalt passt sich an. Die Attribute <code>flex-grow</code> und <code>flex-shrink</code> geben an, wie unbenutzter Raum verwendet werden soll.</p>
 <h3 id="flex-basis">flex-basis</h3>
 <div class="svg-export">
 
@@ -864,8 +863,7 @@ Neben <code>row</code> und <code>column</code> gibt es jeweils noch <code>row-re
 </div>
 
 <h2 id="fazit">Fazit</h2>
-<p>Es gibt noch diverse mehr Optionen, wie man mit Flexbox kontrollieren kann. So lassen sich zum Beispiel auch Elemente neu im Fluss umsortieren (<code>order</code>) oder einzelene Elemente noch separat ausserhalb des Flusses der Kreuzachse (<code>align-self</code>) orientieren. Doch mit ein paar wenigen Attributen kann man meist schon seine gewünschte Layout-Anordnung erreichen.
-Flexbox ist durch die Unglaubliche Flexibilität einwenig schwer sich rein zu denken, aber mit der Zeit schätzt man die vielfältigen Anordnungen, die einem ein lebendiges Layout ermöglichen.</p>
+<p>Es gibt noch verschiedenste weitere Optionen, die mit Flexbox kontrolliert werden können. So lässt sich zum Beispiel mit <code>order</code> die Reihenfolge der Elemente individuell ordnen und mit <code>align-self</code> können einzelne Elemente entlang der Kreuzachse orientiert werden. Doch schon mit wenigen Attributen kann man meist die gewünschte Layout-Anordnung erreichen. Aufgrund der auffallenden Flexibilität von Flexbox ist es allerdings ab und an schwierig, sich hineinzudenken. Aber mit der Zeit lernt man die vielfältigen Anordnungen schätzen, die ein lebendiges Layout ermöglichen.</p>
 <hr />
 
 <h3 id="autor">Autor</h3>
