@@ -6,3 +6,5 @@ ci/.ssh/secret.key
 ci/.ssh/id_rsa
 ci/.ssh/secret.key
 /final
+ci/.ssh/id_rsa
+ci/.ssh/secret.key
